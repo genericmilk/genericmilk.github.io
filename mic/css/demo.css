@@ -5,10 +5,8 @@ body{
     background-color: #E19D93;
     color: #C7493A;
 }
-h1{
-    font-family: 'Lobster Two', sans-serif;
-    font-size: 100px;
-    margin: 0;
+h5{
+    font-family: 'Pacifico', cursive;
 }
 
 .inner{
