@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <link rel="stylesheet" href="css/demo.css">
+</head>
+<body>
+
+    <button>Trigger</button>
+
+    <script src="mic.js"></script>
+
+    <script>
+        // on button click, run mic
+        document.querySelector('button').onclick = function(e) {
+            mic.drop(e,[
+                {
+                    name: 'Account settings',
+                    run: function(){
+                        console.log('Handle here');
+                    }
+                },
+                {
+                    name: 'Option 2',
+                    run: function(){
+                        console.log('Handle here');
+                    }
+                },
+                {
+                    name: 'Option 3',
+                    run: function(){
+                        console.log('Handle here');
+                    }
+                },
+                
+                {
+                    name: 'Log out',
+                    class: 'red',
+                    run: function(){
+                        // run logout
+                    }
+                }
+            ]);
+        };
+    </script>
+</body>
+</html>
