@@ -1,27 +1,28 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
+body{
+    background-color: #E19D93;
+    color: #C7493A;
+}
 h1{
     font-family: 'Lobster Two', sans-serif;
     font-size: 100px;
     margin: 0;
 }
-h2{
-    font-size: 50px;
-    margin: 0;
-}
-h3{
-    font-size: 25px;
-    margin: 10px 0px;
-}
+
 .inner{
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
 }
+
+.inner img.logo{
+    width:400px;
+}
 button{
-    background-color: #307ed1;
+    background-color: #C7493A;
     border: 0;
     border-radius: 10px;
     padding: 10px 30px;
