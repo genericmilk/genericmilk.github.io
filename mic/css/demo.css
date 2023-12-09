@@ -1,24 +1,22 @@
-*{
-    font-family: 'Roboto', sans-serif;
-}
+
 body{
     background-color: #E19D93;
     color: #C7493A;
-}
-h5{
-    font-family: 'Pacifico', cursive;
+    transition: all 1s ease-in-out;
 }
 
-.inner{
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+ul.genericmilk-mic li{
+    color: black;
+}
+ul.genericmilk-mic li a:hover{
+    background-color: #C7493A!important;
+    color: white;
+}
+ul.genericmilk-mic li.danger a:hover{
+    background-color: #f5b71b!important;
+    color: white;
 }
 
-.inner img.logo{
-    width:400px;
-}
 button{
     background-color: #C7493A;
     border: 0;
@@ -26,8 +24,24 @@ button{
     padding: 10px 30px;
     color: white;
     cursor: pointer;
-    transition: all .1s ease-in-out;            
+    transition: all .1s ease-in-out;
+    font-size: 25px;
 }
 button:active{
     transform: scale(.95);
 }
+
+body:not(.light){
+    background-color: #C7493A;
+    color: #E19D93;
+}
+
+body:not(.light) .inner{
+    color: white;
+}
+
+body:not(.light) button{
+    background-color: #E19D93!important;
+    color: #C7493A!important;
+}
+

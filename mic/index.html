@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mic by Genericmilk</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+    <link href="../common/css/common.css" rel="stylesheet">
     <link href="css/demo.css" rel="stylesheet">
+
+    <link href="../common/highlight/prism.css" rel="stylesheet">
+    <script src="../common/highlight/prism.js"></script>
     
 </head>
 <body class="light">
@@ -17,12 +22,58 @@
         <img class="logo" src="img/app.png">
         <h1>Mic</h1>
 
-        <p>
+        <h2>
             A simple, native, lightweight dropdown plugin that is stupidly easy to use and integrate
-        </p>
+        </h2>
         
         <button>Try it out ✨</button>
         
+        <div class="nitty-gritty">
+            <strong>Getting started with Mic</strong>
+            <p>
+                Mic is a simple, native, lightweight dropdown plugin that is stupidly easy to use and integrate. It is built with vanilla JavaScript and has no dependencies. It is also very lightweight, coming in at only 1.5kb minified and gzipped.
+            </p>
+            <p>
+                Mic is also very easy to use. Simply include the script in your page, and then attach a <strong>mic.drop()</strong> function on the element you want to turn into a dropdown. That's it!
+            </p>
+            <p>
+                As an example, here is a dropdown that is attached to a button. Click the button to see the dropdown in action.
+            </p>
+            <pre>
+                <code class="language-javascript">
+document.querySelector('button').onclick = function(e) {
+    mic.drop(e,[
+        {
+            name: 'Light mode',
+            run: function(){
+                document.body.classList.add('light');
+            }
+        },
+        {
+            name: 'Dark mode',
+            run: function(){
+                document.body.classList.remove('light');
+            }
+        },
+        {
+            name: 'A song about a leopard',
+            run: function(){
+                window.open('https://www.youtube.com/watch?v=5es5MQX0VVA','_blank');
+            }
+        },                
+        {
+            name: 'Destroy the world',
+            class: 'danger',
+            run: function(){
+                alert('kerboom');
+            }
+        }
+    ]);
+};
+                </code>
+            </pre>
+
+        </div>
 
         <h5>genericmilk</h5>
     </div>

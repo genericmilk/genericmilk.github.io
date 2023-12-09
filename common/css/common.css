@@ -1,0 +1,38 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.inner img.logo{
+    width:300px;
+}
+h1{
+    font-size: 90px;
+    margin: 0;
+}
+h2{
+    font-size: 30px;
+    margin: 10px 0px;
+}
+h5{
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+}
+.inner{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+.nitty-gritty{
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(100% - (20px * 2));
+    background-color: rgba(255,255,255,.2);
+    margin: 20px 0px;
+    text-align: left;
+}
+code{
+    font-family: 'JetBrains Mono', monospace!important;
+    > *{
+        font-family: 'JetBrains Mono', monospace!important;
+    }    
+}

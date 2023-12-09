@@ -20,9 +20,8 @@ document.querySelector('button').onclick = function(e) {
         },                
         {
             name: 'Destroy the world',
-            class: 'red',
+            class: 'danger',
             run: function(){
-                // run logout
                 alert('kerboom');
             }
         }
