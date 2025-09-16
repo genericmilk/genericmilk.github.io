@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daihon — Run npm scripts from your Mac menu bar</title>
+  <meta name="description" content="Daihon is a macOS menu bar app for running npm scripts per project with start/stop, live logs, persistence, and notifications." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="app-icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="app-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta property="og:title" content="Daihon — Run npm scripts from your Mac menu bar" />
+  <meta property="og:description" content="Start/Stop scripts, tail logs, and keep them persistent. Zsh environment & notifications." />
+  <meta property="og:image" content="app-icon.png" />
+  <meta name="theme-color" content="#ff3b3b" />
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container row between center">
+      <a class="brand" href="#" aria-label="Daihon home">
+        <img src="wordmark.svg" alt="Daihon wordmark" />
+      </a>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="https://github.com/genericmilk/daihon" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+      <a class="btn primary download-cta" href="https://github.com/genericmilk/daihon/releases/latest/download/Daihon.dmg">
+        <i data-lucide="download"></i>
+        <span>Download for macOS</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero reveal">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1><span class="accent">Run</span> npm scripts from your Mac menu bar</h1>
+          <p class="lead">Start/Stop scripts in one click. Live tailing logs. Persistent history. zsh environment. Notifications when things finish.</p>
+          <div class="cta">
+            <a class="btn xl primary download-cta" href="https://github.com/genericmilk/daihon/releases/latest/download/Daihon.dmg">
+              <i data-lucide="download"></i>
+              <span>Download</span>
+            </a>
+            <a class="btn xl ghost" href="https://github.com/genericmilk/daihon" target="_blank" rel="noopener">
+              <i data-lucide="github"></i>
+              <span>View on GitHub</span>
+            </a>
+          </div>
+          <ul class="ticks">
+            <li><i data-lucide="menu"></i> Menu bar popover lists your projects</li>
+            <li><i data-lucide="play"></i> Start/Stop scripts and restart fast</li>
+            <li><i data-lucide="scroll-text"></i> Live logs with tailing window</li>
+            <li><i data-lucide="save"></i> Logs persist across sessions</li>
+          </ul>
+        </div>
+        <div class="hero-art tilt">
+          <div class="glow"></div>
+          <img src="app-icon.png" alt="Daihon app icon" width="420" height="420" />
+        </div>
+      </div>
+      <div class="bg-ornament"></div>
+    </section>
+
+    <section id="features" class="features reveal">
+      <div class="container">
+        <h2>Features</h2>
+        <div class="feature-row">
+          <div class="feature-media">
+            <img src="screenshots/menubar.png" alt="Menu bar popover showing projects and scripts" />
+          </div>
+          <div class="feature-copy">
+            <h3><i data-lucide="menu"></i> Menu bar first</h3>
+            <p>See all your projects at a glance and run scripts instantly from the top of your screen.</p>
+            <ul class="bullets">
+              <li><i data-lucide="folder"></i> Per‑project script lists</li>
+              <li><i data-lucide="play"></i> Start / Stop / Restart in one click</li>
+              <li><i data-lucide="zap"></i> Respects your zsh PATH</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feature-row reverse">
+          <div class="feature-media">
+            <img src="screenshots/logs.png" alt="Live logs window streaming output" />
+          </div>
+          <div class="feature-copy">
+            <h3><i data-lucide="scroll-text"></i> Live logs that persist</h3>
+            <p>Open a log window for any running script and tail output in real time—history is kept across sessions.</p>
+            <ul class="bullets">
+              <li><i data-lucide="save"></i> Saved per project & script</li>
+              <li><i data-lucide="bell"></i> Optional notifications when things change</li>
+              <li><i data-lucide="search"></i> Quick scroll & clear</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="how reveal">
+      <div class="container">
+        <h2>How it works</h2>
+        <div class="how-grid">
+          <div class="step">
+            <i data-lucide="folder-plus"></i>
+            <h3>Add your project</h3>
+            <p>Open Preferences and select a folder. Scripts are detected from <code>package.json</code>.</p>
+          </div>
+          <div class="step">
+            <i data-lucide="play"></i>
+            <h3>Run a script</h3>
+            <p>Use the menu bar to start and stop scripts. Restart when you need a clean slate.</p>
+          </div>
+          <div class="step">
+            <i data-lucide="list"></i>
+            <h3>Watch the logs</h3>
+            <p>Open the Logs window for live output. History persists between sessions.</p>
+          </div>
+        </div>
+
+        <div class="requirements">
+          <h2>What you need</h2>
+          <ul class="req-list">
+            <li class="req-item"><i data-lucide="apple"></i> A Mac running macOS 13 or later</li>
+            <li class="req-item"><i data-lucide="cpu"></i> Works on Apple Silicon (M1/M2/M3) and Intel processors</li>
+            <li class="req-item"><i data-lucide="terminal"></i> If your projects use Node, install Node to run their scripts</li>
+          </ul>
+        </div>
+
+        <div class="center">
+          <a class="btn xl primary download-cta" href="https://github.com/genericmilk/daihon/releases/latest/download/Daihon.dmg">
+            <i data-lucide="download"></i>
+            <span>Download for macOS</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container row between center">
+      <p>© <span id="year"></span> genericmilk. All rights reserved</p>
+      <div class="row gap">
+        <a href="https://github.com/genericmilk/daihon" target="_blank" rel="noopener">
+          <i data-lucide="github"></i>
+        </a>
+        <a href="#" class="to-top"><i data-lucide="arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
